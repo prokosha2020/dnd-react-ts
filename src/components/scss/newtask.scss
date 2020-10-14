@@ -55,7 +55,12 @@
 .fa-plus {
     width: 15px;
     height: 15px;
-    fill: deepskyblue
+    fill: deepskyblue;
+    pointer-events: none;
+}
+
+.svg-search {
+    pointer-events: none;
 }
 
 .header_tasks {
