@@ -1,0 +1,50 @@
+.cont_select-status {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.select-status {
+    display: block;
+    width: 100%;
+    padding: 7px 30px 7px 7px;
+    background: none;
+    border: 1px solid forestgreen;
+    border-radius: 3px;
+    appearance: none;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: forestgreen;
+    color: white;
+}
+
+.cont_select-status::after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: white transparent transparent transparent;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 1;
+    margin-top: -3px;
+}
+
+.select-status-option {
+    background-color: forestgreen;
+    color: white;
+
+    &:hover {
+        background-color: rgba(28, 146, 28, 0.63);
+    }
+}
+
+.select-status-label {
+    color: forestgreen;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}

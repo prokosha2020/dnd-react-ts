@@ -1,0 +1,182 @@
+$color_backlog: lightgrey;
+$color_selected:gold;
+$color_running: rgb(236, 57, 26);
+$color_evaluating:skyblue;
+$color_live: palegreen;
+
+@mixin button-reset {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.cont-dnd {
+    display: flex;
+    flex-grow: 1;
+}
+
+.main_cont-dnd {
+    display: flex;
+    flex-grow: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.backlog {
+    background: darken($color_backlog, 10%);
+
+    &_title {
+        background: $color_backlog;
+    }
+
+}
+
+.selected {
+    background: darken($color_selected, 10%);
+
+    &_title {
+        background: $color_selected;
+    }
+
+}
+
+.running {
+    background: darken($color_running, 10%);
+
+    &_title {
+        background: $color_running;
+    }
+}
+
+.evaluating {
+    background: darken($color_evaluating, 10%);
+
+    &_title {
+        background: $color_evaluating;
+    }
+}
+
+.live {
+    background: darken($color_live, 10%);
+
+    &_title {
+        background: $color_live;
+    }
+}
+
+.tasks-quantity {
+    color: white;
+    font-size: 1.2rem;
+    align-self: flex-end;
+}
+
+.svg-icon {
+    fill: white;
+    width: 20px;
+    height: 20px;
+}
+
+.title-column {
+    margin: 0 0 0 10px;
+    color: white;
+    width: 75%;
+
+    &:first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.edit-task {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+
+    .svg-settings {
+        fill: rgba(20, 19, 19, 0.733);
+    }
+}
+
+.task-descr {
+    margin-top: 5px;
+}
+
+.header_tasks {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.main-cont {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.create-task {
+    @include button-reset;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background: deepskyblue;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.search-task {
+    @include button-reset;
+    text-align: center;
+}
+
+.svg-search {
+    fill: deepskyblue;
+    width: 25px;
+    height: 25px;
+}
+
+.cont_input-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .search-task {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .svg-search {
+        fill: white;
+    }
+}
+
+.input-search {
+    background-color: rgb(141, 219, 245);
+    border: 2px solid deepskyblue;
+    height: 100%;
+    color: rgb(31, 31, 145);
+    padding: 5px 35px 5px 5px;
+    border-radius: 20px;
+}
+
+
+//column
+.cont_taskList {
+    position: relative;
+
+    .create-task {
+        color: skyblue;
+        background-color: white;
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+}

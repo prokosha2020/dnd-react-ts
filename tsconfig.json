@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,8 +14,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react"
+    // "typeRoots": ["../../typings", "../../node_modules/@types"]
+    // "noImplicitAny": false
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src", "typings/jsonbox/index.d.ts"],
+  "rootDir": "src",
+  "outDir": "build",
+  "exclude": ["../../node_modules", "../../typings"]
 }

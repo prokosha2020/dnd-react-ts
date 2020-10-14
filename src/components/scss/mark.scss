@@ -1,0 +1,70 @@
+.task_mark {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 20px;
+
+    .task-title-label {
+        color: forestgreen;
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
+.cont_task_mark-title {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.task_mark-title {
+    color: forestgreen;
+    margin-bottom: 10px;
+}
+
+.mark {
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+    border-radius: 50%;
+    outline-style: none;
+    transition: all .6s;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.cont_task_mark {
+    display: flex;
+}
+
+.cont_tasks_mark-cb {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mark-default {
+    border: 2px solid forestgreen;
+    background-color: none;
+    text-align: center;
+    color: forestgreen;
+    font-size: 14px;
+
+}
+
+.task_mark-cb {
+    display: none;
+
+}
+
+.task_mark-cb:checked+label {
+    border: 3px solid white;
+}
+
+.task_mark-cb:checked+label:hover {
+    border: 3px solid white;
+}
